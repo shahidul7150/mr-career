@@ -1,0 +1,44 @@
+[
+    {
+        "id":"1",
+        "name":"Professional CV Writing",
+        "price":"45",
+        "img":"https://i.ibb.co/ryWK6xn/cv.png",
+        "description":"CV is more important for get a job. So you need a Professional CV for making your career "
+    },
+    {
+        "id":"2",
+        "name":"LinkedIn Profile Optimization",
+        "price":"100",
+        "img":"https://i.ibb.co/zNHrdSC/linkdin.png",
+        "description":"For the build up your career you must need a professional linkedIn profile"
+    },
+    {
+        "id":"3",
+        "name":"Indeed Profile Optimization",
+        "price":"60",
+        "img":"https://i.ibb.co/hWpmmFz/indeed.jpg",
+        "description":"Indeed is a job posting and job getting platform so you should need a profile"
+    },
+    {
+        "id":"4",
+        "name":"Effective Cover Letter Writing ",
+        "price":"35",
+        "img":"https://i.ibb.co/db4mggK/coverletter.jpg",
+        "description":"For getting a job you must write a cover letter and you can take a lesson from here"
+    },
+    {
+        "id":"5",
+        "name":"Motivation Letter Writing",
+        "price":"55",
+        "img":"https://i.ibb.co/mJqnBbL/mtivation.jpg",
+        "description":"Motivational letter writing is build up your career a high stage "
+    },
+    {
+        "id":"6",
+        "name":"Career Counseling Program",
+        "price":"90",
+        "img":"https://i.ibb.co/L59WWHq/counselling-2.jpg",
+        "description":"Career counseling program give you better guid lines for move your profession in life"
+    }
+]
