@@ -13,7 +13,7 @@ const Clients = () => {
             <h2>My Satisfying Clients</h2>
             <div className='clients-container'>
             {
-                clients.map(client=><Client key={client.id} client={client}></Client>)
+                clients.map(client=><Client key={client._id} client={client}></Client>)
             }
            </div>
         </div>
