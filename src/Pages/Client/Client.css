@@ -1,0 +1,8 @@
+.client-container{
+    background: #f8f5f5;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.client-container img{
+    width: 100%;
+    height: 250px;
+}
