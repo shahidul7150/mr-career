@@ -1,9 +1,7 @@
 # Mr Career
 ## _Let's Build Your Life_
 My Live link: https://mr-career.web.app/
-My Gig
-Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
-AngularJS-powered HTML5 Markdown editor.
+
 # My Features
 - Add services feature
 - Add clients reviews
