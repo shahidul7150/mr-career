@@ -6,3 +6,9 @@
     padding: 40px;
     
 }
+
+@media only screen and (max-width:576px){
+    .clients-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

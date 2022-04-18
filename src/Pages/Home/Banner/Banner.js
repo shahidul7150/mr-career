@@ -16,8 +16,8 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 className='text-dark fw-bold'>First slide label</h3>
-            <p className='text-dark'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3 className='text-white fw-bold'>Open my door for new journey</h3>
+            <p className='text-white'>Knowledge is the key to success.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -28,8 +28,8 @@ const Banner = () => {
           />
   
           <Carousel.Caption>
-            <h3 className='text-dark fw-bold'>Second slide label</h3>
-            <p className='text-dark'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3 className='text-white fw-bold'>Learn everyday and motivate</h3>
+            <p className='text-white'>Develop your skill and gain your goal</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -40,9 +40,9 @@ const Banner = () => {
           />
   
           <Carousel.Caption>
-            <h3 className='text-dark fw-bold'>Third slide label</h3>
-            <p className='text-dark'>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            <h3 className='text-white fw-bold'>Grow Your thinking ability</h3>
+            <p className='text-white'>
+              Thinking ability makes your new society.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
