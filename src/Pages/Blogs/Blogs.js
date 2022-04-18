@@ -8,7 +8,7 @@ const Blogs = () => {
 
             <div>
                 <div>
-                    <img width="600px" src="https://lh3.googleusercontent.com/16FwaRpvUmWs1ZfVVsYmoA4gqvNH8kazS9crLGTEZAxKKDuH6d_j_GKsqzt6WWwqHqgIJmmkYOu3Nk6QFotq5l7MdT-BpAOzoTJM8KX6ToS9SZCVIsj1v2wc5YZeg8twRuX34HER" alt="" />
+                    <img width="600px" src="https://static.javatpoint.com/blog/images/authentication-vs-authorization.png" alt="" />
 
                     <h2 className='w-50 mx-auto text-start text-primary pt-3'>What is difference between  authentication and  authorization?</h2>
                     <p className='w-50 mx-auto text-start'> <span className='fw-bold'>Authentication:</span>Authentication is verify user identity by credentials based on knowledge.User provide authentication factors when requesting access</p>
@@ -23,7 +23,9 @@ const Blogs = () => {
 
                     <p className='w-50 mx-auto text-start'> <span className='fw-bold'>What other option implement: </span> First of all I'm using firebase for authentication and then I using firebase for hosting my site .</p>
                 </div>
-                <div>
+                <hr />
+
+                <div className='pb-5'>
                     <img width="600px" src="https://i.ytimg.com/vi/iosNuIdQoy8/maxresdefault.jpg" alt="" />
                     <h2 className='w-50 mx-auto text-start text-primary pt-3'>What other services does firebase provide other than authentication?</h2>
                     <div className='d-block'>

@@ -1,27 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
 import Social from "../SocialLogin/Social";
 import auth from "../../../firebase.init";
+import { async } from "@firebase/util";
 
 const Signup = () => {
+  const [agree, setAgree] = useState(false);
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, profileUpdateError] = useUpdateProfile(auth);
   const navigate = useNavigate();
 
   const navigateLogin = () => {
     navigate("/login");
   };
-  if (user) {
-    navigate("/home")
-  }
-  const handleSignUp = (event) => {
+  
+    
+  
+  const handleSignUp =async (event) => {
     event.preventDefault();
-    const name = event.target.name.value;
+    const displayName = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-console.log(email,password);
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName });
+    console.log('Updated profile');
+    navigate("/home");
+    
   };
   return (
     <div className="login mx-auto ">
@@ -43,9 +49,24 @@ console.log(email,password);
             placeholder="password"
             required
           />
-          <input type="checkbox" name="terms" id="terms" />
-          <label htmlFor="terms">Accept mr-career terms and conditions</label>
-          <input className="btn btn-primary mt-2" type="submit" value="Signup" />
+          <input
+            onClick={() => setAgree(!agree)}
+            type="checkbox"
+            name="terms"
+            id="terms"
+          />
+          <label
+            className={`ps-2 ${agree ? "" : "text-danger"}`}
+            htmlFor="terms"
+          >
+            Accept mr-career terms and conditions
+          </label>
+          <input
+            disabled={!agree}
+            className="btn btn-primary mt-2"
+            type="submit"
+            value="Signup"
+          />
         </form>
         <p>
           New user?{" "}
