@@ -1,5 +1,6 @@
+import { async } from "@firebase/util";
 import React, { useRef } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Social from "../SocialLogin/Social";
@@ -9,10 +10,14 @@ const Login = () => {
   const navigate = useNavigate();
   const emailRef = useRef("");
   const passwordRef = useRef("");
-  const location=useLocation()
+  const location = useLocation();
   let from = location.state?.from?.pathname || "/";
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  let errorShow;
+  if (error) {
+    errorShow = <p className="text-danger">Error: {error?.message}</p>;
+  }
   if (user) {
     navigate(from, { replace: true });
   }
@@ -22,6 +27,13 @@ const Login = () => {
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
   };
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email)
+    alert("Sent email")
+  }
   const navigateRegister = () => {
     navigate("/register");
   };
@@ -48,8 +60,9 @@ const Login = () => {
           />
           <input className="btn btn-primary" type="submit" value="Login" />
         </form>
+        {errorShow}
         <p>
-          New user?{" "}
+          New user?
           <Link
             to="/register"
             className="text-danger pe-auto text-decoration-none "
@@ -57,6 +70,16 @@ const Login = () => {
           >
             Please Signup
           </Link>
+        </p>
+        <p>
+          Forget Password?{" "}
+          <Link
+            to="/register"
+            className="text-danger pe-auto text-decoration-none "
+            onClick={resetPassword}
+          >
+            Reset Password
+          </Link>{" "}
         </p>
       </div>
       <Social></Social>

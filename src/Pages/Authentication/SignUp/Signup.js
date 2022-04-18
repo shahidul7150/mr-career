@@ -43,7 +43,9 @@ console.log(email,password);
             placeholder="password"
             required
           />
-          <input className="btn btn-primary" type="submit" value="Login" />
+          <input type="checkbox" name="terms" id="terms" />
+          <label htmlFor="terms">Accept mr-career terms and conditions</label>
+          <input className="btn btn-primary mt-2" type="submit" value="Signup" />
         </form>
         <p>
           New user?{" "}
